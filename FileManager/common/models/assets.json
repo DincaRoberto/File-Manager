@@ -1,0 +1,27 @@
+{
+  "name": "Assets",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Author": {
+      "type": "string"
+    },
+    "Created": {
+      "type": "date"
+    },
+    "Modified": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

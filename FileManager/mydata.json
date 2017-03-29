@@ -1,0 +1,20 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "Assets": 2
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "Assets": {
+      "1": "{\"Name\":\"File2\",\"Author\":\"Me\",\"Created\":\"2017-03-29T14:15:36.317Z\",\"Modified\":\"2017-03-29T14:15:36.317Z\",\"id\":1}"
+    }
+  }
+}

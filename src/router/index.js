@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Main from '@/components/Main'
+import FmContainer from '@/components/fm-container/fm-container';
 
 Vue.use(Router);
 
@@ -8,8 +8,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'main',
-      component: Main
+      name: 'fmContainer',
+      component: FmContainer
     }
   ]
 })

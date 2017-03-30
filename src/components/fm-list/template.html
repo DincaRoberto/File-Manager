@@ -1,3 +1,15 @@
 <div id="fm-list-id" class="fm-list-class">
-    <div v-for="todo in listItems">{{todo.text}}</div>
+
+    <span v-for="(value, key) in items[0]">
+        {{key}}
+    </span>
+
+    <div v-for="item in items">
+        <span v-for="(value, key) in item">
+            {{ value }}
+        </span>
+    </div>
+
+
+
 </div>

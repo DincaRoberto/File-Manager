@@ -6,6 +6,7 @@ import Vue from 'vue';
 
 export default Vue.component('fm-list', {
 
+
     template: '#fm-list-id',
-    props: ['listItems']
+    props: ['items']
 });

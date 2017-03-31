@@ -5,6 +5,7 @@ import VueResource from 'vue-resource'
 import App from './App'
 import router from './router'
 import './components/i18n/translate';
+import './components/date-display/script';
 
 import 'vue-awesome/icons';
 import Icon from 'vue-awesome/components/Icon.vue'

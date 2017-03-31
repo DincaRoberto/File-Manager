@@ -1,7 +1,9 @@
 <div id="fm-container" class="fm-container" xmlns:v-on="http://www.w3.org/1999/xhtml">
     <h1> {{ title | label('fmContainer') }} </h1>
 
-    <fm-loading v-if="loading"></fm-loading>
+    <fm-loading v-if="loading">
+
+    </fm-loading>
 
     <fm-error v-if="!loading && error">
         <p>Error</p>
@@ -16,10 +18,5 @@
     </fm-list>
 
     <input type='file' accept='image/*' v-on:change="openFile">
-
-    <icon label="No Photos">
-        <icon name="camera"></icon>
-        <icon name="ban" scale="2" class="alert"></icon>
-    </icon>
 
 </div>

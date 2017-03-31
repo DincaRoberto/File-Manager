@@ -3,5 +3,5 @@
  */
 
 export const fmContainer = {
-    'Title': "File Manager Container"
+    'Title': "File Manager"
 };

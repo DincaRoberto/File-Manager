@@ -5,7 +5,7 @@
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
-    "Assets": 2
+    "Assets": 19
   },
   "models": {
     "User": {},
@@ -14,7 +14,7 @@
     "RoleMapping": {},
     "Role": {},
     "Assets": {
-      "1": "{\"Name\":\"File2\",\"Author\":\"Me\",\"Created\":\"2017-03-29T14:15:36.317Z\",\"Modified\":\"2017-03-29T14:15:36.317Z\",\"id\":1}"
+      "18": "{\"Name\":\"4.png\",\"Author\":\"Me\",\"Created\":\"2017-03-31T10:27:48.446Z\",\"Modified\":\"2017-03-30T11:18:01.000Z\",\"id\":18}"
     }
   }
 }

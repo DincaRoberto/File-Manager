@@ -8,9 +8,10 @@ import Vue from 'vue'
 import * as ApiService from "../api/ApiService.vue";
 
 
-var openFile = function (event) {
+function openFile(event) {
     var input = event.target;
 
+    var self = this;
 
     var reader = new FileReader();
     reader.onload = function (r) {
@@ -20,11 +21,21 @@ var openFile = function (event) {
         var dataURL = reader;
         console.log(dataURL);
         console.log(f);
+
+        ApiService.postAsset(f.name, 'Me', f.lastModifiedDate, (new Date())).then(function(res){
+            res.json().then((res)=>{
+                console.log(self.filesList.push(res));
+            })
+        });
     };
     reader.readAsBinaryString(input.files[0]);
 };
 
-export default Vue.component('fmContainer', {
+var FmContainer = Vue.component('fmContainer', {
+
+    name: "fmContainer",
+
+    template: "#fm-container",
 
     components: {
         "fm-loading": require('../fm-loading/fm-loading.vue'),
@@ -44,23 +55,23 @@ export default Vue.component('fmContainer', {
         openFile: openFile
     },
 
-
-
     created: function () {
         setTimeout(()=> {
             ApiService.getAssets().then((res)=>{
                 res.json().then((res) => {
-                    console.log(res);
+                    //console.log(res);
                     this.loading = false;
                     this.filesList = res;
                 });
             }, (err)=>{
-                console.log(err);
+                //console.log(err);
                 this.loading = false;
                 this.error = true;
             });
         }, 5000);
     }
 })
+
+export default FmContainer;
 
 

@@ -11,8 +11,13 @@ function getAssets() {
 }
 
 
-function create() {
-    return Vue.http.post('/api/posts');
+function postAsset(name, author, modified, uploaded) {
+    return Vue.http.post(root + 'Assets', {
+        "Name": name,
+        "Author": author,
+        "Created": uploaded,
+        "Modified": modified
+    });
 }
 
-export {getAssets , create};
+export {getAssets , postAsset};

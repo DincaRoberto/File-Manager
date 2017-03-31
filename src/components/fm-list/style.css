@@ -1,3 +1,30 @@
 .fm-list-class{
   color: #696969;
+
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  flex-basis: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.fm-list-header{
+  display: flex;
+  flex-grow: 1;
+  flex-flow: row;
+  flex-basis: auto;
+  flex-shrink: 0;
+  align-items: center;
+  min-width: 100%;
+  justify-content: space-around;
+}
+
+.fm-list-body > span {
+  padding: 0 8px;
+}
+
+th, td {
+  text-align: left;
+  padding: 2px 15px;
 }

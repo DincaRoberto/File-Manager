@@ -4,9 +4,13 @@ import Vue from 'vue'
 import VueResource from 'vue-resource'
 import App from './App'
 import router from './router'
+import './components/i18n/translate';
+
 
 Vue.config.productionTip = false;
 Vue.use(VueResource);
+
+
 
 /* eslint-disable no-new */
 new Vue({
@@ -14,6 +18,11 @@ new Vue({
   router,
   template: '<App/>',
   components: { App }
+
 });
+
+
+
+
 
 

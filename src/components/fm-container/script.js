@@ -1,10 +1,30 @@
+
 /**
  * Created by r.dinca on 30/03/17.
  */
 
+import Vue from 'vue'
 
-export default {
-    name: 'fmContainer',
+import * as ApiService from "../api/ApiService.vue";
+
+
+var openFile = function (event) {
+    var input = event.target;
+
+
+    var reader = new FileReader();
+    reader.onload = function (r) {
+
+        var f = event.target.files[0];
+
+        var dataURL = reader;
+        console.log(dataURL);
+        console.log(f);
+    };
+    reader.readAsBinaryString(input.files[0]);
+};
+
+export default Vue.component('fmContainer', {
 
     components: {
         "fm-loading": require('../fm-loading/fm-loading.vue'),
@@ -14,19 +34,33 @@ export default {
 
     data () {
         return {
-            msg: 'Welcome to Your Vue.js App',
+            title: 'Title',
             filesList: null,
             loading: true,
             error: false
         }
     },
-    methods: {},
+    methods: {
+        openFile: openFile
+    },
+
+
 
     created: function () {
-        setTimeout(()=>{
-            this.loading = false;
-
-            this.filesList = [{a:"a1", b:"b1"}, {a:"a2", b:"b2"}, {a:"a3", b:"b3"}];
+        setTimeout(()=> {
+            ApiService.getAssets().then((res)=>{
+                res.json().then((res) => {
+                    console.log(res);
+                    this.loading = false;
+                    this.filesList = res;
+                });
+            }, (err)=>{
+                console.log(err);
+                this.loading = false;
+                this.error = true;
+            });
         }, 5000);
     }
-}
+})
+
+

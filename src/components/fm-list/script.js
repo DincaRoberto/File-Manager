@@ -6,8 +6,15 @@
 
 import Vue from 'vue';
 
+
 export default Vue.component('fm-list', {
     name: 'fm-list',
     template: '#fm-list-id',
-    props: ['items']
+    props: ['items'],
+
+    methods: {
+        onDelete: function (event, it) {
+            this.$emit('delete', it)
+        }
+    }
 });

@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "vue": "^2.2.2",
+    "vue-awesome": "^2.2.3",
     "vue-router": "^2.2.0"
   },
   "devDependencies": {

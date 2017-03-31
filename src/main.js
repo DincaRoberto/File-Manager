@@ -6,6 +6,10 @@ import App from './App'
 import router from './router'
 import './components/i18n/translate';
 
+import 'vue-awesome/icons';
+import Icon from 'vue-awesome/components/Icon.vue'
+Vue.component('icon', Icon)
+
 
 Vue.config.productionTip = false;
 Vue.use(VueResource);

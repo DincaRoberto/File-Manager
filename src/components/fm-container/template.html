@@ -1,10 +1,5 @@
 <div id="fm-container" class="fm-container" xmlns:v-on="http://www.w3.org/1999/xhtml">
     <h1> {{ title | label('fmContainer') }} </h1>
-    <!--fm-list v-bind:list-items="todos"></fm-list>
-
-    <button v-on:click="fetchItem">Greet</button>
-
-    <br-->
 
     <fm-loading v-if="loading"></fm-loading>
 
@@ -16,10 +11,15 @@
         <p>Empty list</p>
     </fm-error>
 
-    <fm-list v-if="!loading && !error && filesList.length > 0" v-bind:items="filesList">
+    <fm-list v-if="!loading && !error && filesList.length > 0" v-bind:items="filesList" v-on:delete="onDelete($event)">
 
     </fm-list>
 
     <input type='file' accept='image/*' v-on:change="openFile">
+
+    <icon label="No Photos">
+        <icon name="camera"></icon>
+        <icon name="ban" scale="2" class="alert"></icon>
+    </icon>
 
 </div>

@@ -8,8 +8,8 @@ import Vue from 'vue';
 
 
 export default Vue.component('fm-list', {
-    name: 'fm-list',
-    template: '#fm-list-id',
+    name: 'display-list',
+    template: '#display-list-id',
     props: ['items'],
 
     methods: {

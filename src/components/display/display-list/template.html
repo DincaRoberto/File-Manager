@@ -1,0 +1,26 @@
+<div id="display-list-id" class="display-list-class" xmlns:v-on="http://www.w3.org/1999/xhtml">
+
+    <table>
+        <tr>
+            <th v-for="(value, key) in items[0]">
+                {{ key | label('displayList')}}
+            </th>
+
+            <th> Delete </th>
+        </tr>
+
+        <tr v-for="item in items" class="display-list-body">
+            <td v-for="(value, key) in item">
+                {{ value | displayDate}}
+            </td>
+
+            <td style="text-align: center">
+                <button  v-on:click="onDelete($event, item)">
+                    <icon name="remove"></icon>
+                </button>
+            </td>
+        </tr>
+    </table>
+
+
+</div>

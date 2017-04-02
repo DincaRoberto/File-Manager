@@ -5,7 +5,7 @@
 
 import Vue from 'vue'
 
-import {postAsset, getAssets, deleteAsset} from "../api/script";
+import {postAsset, getAssets, deleteAsset} from "../api/assetsApi";
 
 
 function openFile(event) {
@@ -44,9 +44,9 @@ var FmContainer = Vue.component('fmContainer', {
     template: "#fm-container",
 
     components: {
-        "fm-loading": require('../fm-loading/fm-loading.vue'),
-        "fm-error": require('../fm-error/fm-error.vue'),
-        "fm-list": require('../fm-list/fm-list.vue')
+        "display-loading": require('../../components/display/display-loading/display-loading.vue'),
+        "display-error": require('../display/display-error/display-error.vue'),
+        "display-list": require('../../components/display/display-list/display-list.vue')
     },
 
     data () {

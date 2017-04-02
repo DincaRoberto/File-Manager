@@ -2,7 +2,7 @@
  * Created by r.dinca on 31/03/17.
  */
 
-import {fmList} from './fm-list';
-import {fmContainer} from './fm-container';
+import {displayList} from './components/display/display-list';
+import {fmContainer} from './components/fm-container';
 
-export {fmList, fmContainer};
+export {displayList, fmContainer};

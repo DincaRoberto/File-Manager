@@ -1,4 +1,4 @@
-.fm-list-class{
+.display-list-class{
   color: #696969;
 
   display: flex;
@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-.fm-list-header{
+.display-list-header{
   display: flex;
   flex-grow: 1;
   flex-flow: row;
@@ -20,7 +20,7 @@
   justify-content: space-around;
 }
 
-.fm-list-body > span {
+.display-list-body > span {
   padding: 0 8px;
 }
 

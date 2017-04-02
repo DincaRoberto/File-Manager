@@ -1,17 +1,17 @@
 <div id="fm-container" class="fm-container" xmlns:v-on="http://www.w3.org/1999/xhtml">
     <h1> {{ title | label('fmContainer') }} </h1>
 
-    <fm-loading v-if="loading">
+    <display-loading v-if="loading">
 
-    </fm-loading>
+    </display-loading>
 
-    <fm-error v-if="!loading && error">
+    <display-error v-if="!loading && error">
         <p>Error</p>
-    </fm-error>
+    </display-error>
 
-    <fm-error v-if="!loading && !error && filesList.length == 0">
+    <display-error v-if="!loading && !error && filesList.length == 0">
         <p>Empty list</p>
-    </fm-error>
+    </display-error>
 
     <fm-list v-if="!loading && !error && filesList.length > 0" v-bind:items="filesList" v-on:delete="onDelete($event)">
 

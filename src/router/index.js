@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import FmContainer from '@/components/fm-container/fm-container';
+import FmContainer from '@/fm-container/fm-container';
 
 Vue.use(Router);
 

@@ -44,9 +44,9 @@ var FmContainer = Vue.component('fmContainer', {
     template: "#fm-container",
 
     components: {
-        "display-loading": require('../../components/display/display-loading/display-loading.vue'),
+        "display-loading": require('../display/display-loading/display-loading.vue'),
         "display-error": require('../display/display-error/display-error.vue'),
-        "display-list": require('../../components/display/display-list/display-list.vue')
+        "display-list": require('../display/display-list/display-list.vue')
     },
 
     data () {

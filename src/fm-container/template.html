@@ -13,9 +13,9 @@
         <p>Empty list</p>
     </display-error>
 
-    <fm-list v-if="!loading && !error && filesList.length > 0" v-bind:items="filesList" v-on:delete="onDelete($event)">
+    <display-list v-if="!loading && !error && filesList.length > 0" v-bind:items="filesList" v-on:delete="onDelete($event)">
 
-    </fm-list>
+    </display-list>
 
     <input type='file' accept='image/*' v-on:change="openFile">
 

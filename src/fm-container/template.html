@@ -5,17 +5,20 @@
 
     </display-loading>
 
-    <display-error v-if="!loading && error">
-        <p>Error</p>
+    <display-error v-if="!loading && error" level="critical">
+        <span>{{ 'Error' | label('fmContainer')}}</span>
     </display-error>
 
-    <display-error v-if="!loading && !error && filesList.length == 0">
-        <p>Empty list</p>
+    <display-error v-if="!loading && !error && filesList.length == 0" level="information">
+        <span>{{ 'Empty list' | label('fmContainer')}}</span>
     </display-error>
 
     <display-list v-if="!loading && !error && filesList.length > 0" v-bind:items="filesList" v-on:delete="onDelete($event)">
 
     </display-list>
+
+    <br>
+    <hr>
 
     <input type='file' accept='image/*' v-on:change="openFile">
 

@@ -5,7 +5,7 @@
 
 import Vue from 'vue'
 
-import {postAsset, getAssets, deleteAsset} from "../api/assetsApi";
+import { postAsset, getAssets, deleteAsset } from "../api/assetsApi";
 
 
 function openFile(event) {

@@ -3,5 +3,7 @@
  */
 
 export const fmContainer = {
-    'Title': "File Manager"
+    'Title': "File Manager",
+    'Error': "An error occurred",
+    'Empty list': "The list is empty"
 };

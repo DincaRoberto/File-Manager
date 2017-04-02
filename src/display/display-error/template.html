@@ -1,0 +1,13 @@
+<div xmlns:v-bind="http://www.w3.org/1999/xhtml"
+     id="display-error"
+     v-bind:class="[level=='critical' ? 'critical' : '', level=='information' ? 'information' : '']">
+
+    <icon name="warning" scale="2" v-if="level=='critical'"></icon>
+    <icon name="info-circle" scale="2" v-if="level=='information'"></icon>
+
+    <div>
+        <slot></slot>
+    </div>
+
+
+</div>

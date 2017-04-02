@@ -1,20 +1,24 @@
 /**
- * Created by r.dinca on 29/03/17.
+ * Created by:  Dinca Roberto
+ * On:          29/03/17
+ * For project: File-Manager
+ * Description:
  */
+
 
 import { get, post, remove } from './genericApi';
 
-const objName = 'Assets';
+
+const RESOURCE_NAME = 'Assets';
+
 
 function getAssets() {
-
-    return get(objName);
+    return get(RESOURCE_NAME);
 }
 
 
 function postAsset(name, author, modified, uploaded) {
-
-    return post(objName, {
+    return post(RESOURCE_NAME, {
         "Name": name,
         "Author": author,
         "Created": uploaded,
@@ -22,9 +26,10 @@ function postAsset(name, author, modified, uploaded) {
     });
 }
 
-function deleteAsset(id){
 
-    return remove(objName, id);
+function deleteAsset(id){
+    return remove(RESOURCE_NAME, id);
 }
+
 
 export { getAssets , postAsset, deleteAsset };

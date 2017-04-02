@@ -1,9 +1,18 @@
+/**
+ * Created by:  Dinca Roberto
+ * On:          30/03/17
+ * For project: File-Manager
+ * Description:
+ */
+
+
 .fm-container{
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
 }
+
 
 hr{
   width: 70%;

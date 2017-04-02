@@ -1,7 +1,9 @@
 /**
- * Created by r.dinca on 29/03/17.
+ * Created by:  Dinca Roberto
+ * On:          29/03/17
+ * For project: File-Manager
+ * Description:
  */
-
 
 
 import Vue from 'vue';

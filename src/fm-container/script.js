@@ -1,9 +1,13 @@
-
 /**
- * Created by r.dinca on 30/03/17.
+ * Created by:  Dinca Roberto
+ * On:          30/03/17
+ * For project: File-Manager
+ * Description:
  */
 
+
 import Vue from 'vue'
+
 
 import { postAsset, getAssets, deleteAsset } from "../api/assetsApi";
 
@@ -23,11 +27,13 @@ function openFile(event) {
     reader.readAsBinaryString(input.files[0]);
 }
 
+
 function onDelete(value) {
     deleteAsset(value.id).then(()=>{
         this.refreshFiles();
     })
 }
+
 
 function refreshFiles(){
     getAssets().then((res)=>{
@@ -39,7 +45,8 @@ function refreshFiles(){
     });
 }
 
-var FmContainer = Vue.component('fmContainer', {
+
+export default Vue.component('fmContainer', {
 
     template: "#fm-container",
 
@@ -57,6 +64,7 @@ var FmContainer = Vue.component('fmContainer', {
             error: false
         }
     },
+
     methods: {
         openFile: openFile,
         onDelete: onDelete,
@@ -69,7 +77,5 @@ var FmContainer = Vue.component('fmContainer', {
         }, 5000);
     }
 });
-
-export default FmContainer;
 
 

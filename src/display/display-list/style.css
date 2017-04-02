@@ -1,3 +1,11 @@
+/**
+ * Created by:  Dinca Roberto
+ * On:          29/03/17
+ * For project: File-Manager
+ * Description:
+ */
+
+
 .display-list-class{
   color: #696969;
 
@@ -8,6 +16,7 @@
   justify-content: center;
   align-items: center;
 }
+
 
 .display-list-header{
   display: flex;
@@ -20,9 +29,11 @@
   justify-content: space-around;
 }
 
+
 .display-list-body > span {
   padding: 0 8px;
 }
+
 
 th, td {
   text-align: left;

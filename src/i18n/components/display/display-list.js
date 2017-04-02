@@ -1,8 +1,12 @@
 /**
- * Created by r.dinca on 31/03/17.
+ * Created by:  Dinca Roberto
+ * On:          31/03/17
+ * For project: File-Manager
+ * Description:
  */
 
-export const displayList = {
+
+export default {
     'Name': "File Name",
     'Author': "Author",
     'Create': "Uploaded",

@@ -1,3 +1,11 @@
+/**
+* Created by:  Dinca Roberto
+* On:          30/03/17
+* For project: File-Manager
+* Description:
+*/
+
+
 <template>
   <div id="app">
       <icon name="files-o" scale="3" class="alert"></icon>
@@ -7,14 +15,9 @@
 
 <script>
 
-
-
 export default {
   name: 'app',
-
-
 }
-
 
 </script>
 

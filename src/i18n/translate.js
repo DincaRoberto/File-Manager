@@ -1,16 +1,17 @@
 /**
- * Created by r.dinca on 31/03/17.
+ * Created by:  Dinca Roberto
+ * On:          31/03/17
+ * For project: File-Manager
+ * Description:
  */
+
 
 import Vue from 'vue'
 
+
 import * as translate from "./main";
 
+
 export default Vue.filter('label', function (value, arr) {
-
-    if (!translate[arr] || !translate[arr][value]){
-        return value;
-    }
-
-    return translate[arr][value];
+    return (!translate[arr] || !translate[arr][value]) ? value : translate[arr][value];
 });

@@ -1,5 +1,8 @@
 /**
-* Created by r.dinca on 30/03/17.
+* Created by:  Dinca Roberto
+* On:          30/03/17
+* For project: File-Manager
+* Description:
 */
 
 <style src="./style.css"></style>

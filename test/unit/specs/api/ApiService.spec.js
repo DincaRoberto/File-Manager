@@ -6,7 +6,7 @@
 
 import Vue from 'vue'
 import VueResource from 'vue-resource'
-import * as ApiService from '@/components/api/ApiService'
+import * as ApiService from '@/api/assetsApi';
 
 Vue.use(VueResource);
 
@@ -19,24 +19,32 @@ describe('ApiService.vue', () => {
 
         ApiService.getAssets();
 
-        console.log(setNameSpy.callCount); //output: 1
+        //console.log(setNameSpy.callCount); //output: 1
 
         assert(setNameSpy.calledOnce);
 
         setNameSpy.restore();
-    })
+    });
 
-    it('should call http get', () => {
+    it('should call http post', () => {
 
 
         var setNameSpy = sinon.spy(Vue.http, 'post');
 
-        ApiService.create();
+        ApiService.postAsset();
+        sinon.assert.calledOnce(setNameSpy);
 
-        console.log(setNameSpy.callCount); //output: 1
+        setNameSpy.restore();
+    });
 
+    it('should call http delete', () => {
+
+
+        var setNameSpy = sinon.spy(Vue.http, 'delete');
+
+        ApiService.deleteAsset();
         sinon.assert.calledOnce(setNameSpy);
 
         setNameSpy.restore();
     })
-})
+});

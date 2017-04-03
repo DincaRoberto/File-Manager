@@ -28,5 +28,5 @@ describe('FmContainer', () => {
 
         expect(vm1.title).to.equal('Title')
     });
-    
+
 });

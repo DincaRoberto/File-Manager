@@ -5,7 +5,7 @@
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
-    "Assets": 55
+    "Assets": 56
   },
   "models": {
     "User": {},
